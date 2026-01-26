@@ -1,0 +1,12 @@
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: mandarin_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mandarin_db
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
